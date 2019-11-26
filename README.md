@@ -1,7 +1,6 @@
 # My personal website
 
-Currently under construction.
-
+Link: [pierremarion23.github.io](https://pierremarion23.github.io/)
 
 Credits:
 
