@@ -1,0 +1,12 @@
+pandas
+numpy
+bqplot
+widgetsnbextension
+ipywidgets
+scikit-learn
+scipy
+jupyterlab
+jupyterlab_launcher
+traitlets>=4.3.1
+vdom
+xlrd
