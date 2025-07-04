@@ -19,7 +19,8 @@
 
 				<!-- Header -->
 				<header id="header">
-					<img src="images/header/header.svg" alt="" />
+					<!-- <img src="images/header/header.svg" alt="" /> -->
+					 <h2 style="text-align:center; margin-top: 25px;">Pierre Marion</h2>
 				<nav>
 					<ul>
 						<li><a href="#menu">Menu</a></li>
@@ -33,8 +34,8 @@
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="research.html">Research</a></li>
-							<li><a href="teaching.html">Teaching and supervision</a></li>
-							<li><a href="software.html">Software projects</a></li>
+							<li><a href="teaching.html">Teaching and Service</a></li>
+							<li><a href="bio.html">Bio</a></li>
                             <li><a href="misc.html">Miscellaneous</a></li>
 						</ul>
 					</nav>
@@ -42,16 +43,16 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-                            <h1>Some other stuff</h1>
+                            <h1>Miscellaneous</h1>
 
                             
-								<h2>Other publications</h2>
+								<h2>Non-peer-reviewed publications</h2>
                                 <section>
 									<ul>
 										<li>C. Lucas, P. Marion, <i>Recherche et innovation : comment rapprocher sphère publique et privée</i>, Les Docs de La Fabrique, Paris, Presses des Mines, 2022.</li>
-										<li>P. Marion, <i>Comment compter nos morts du Covid ?</i>, The Conversation, May 2020, <a href="https://theconversation.com/comment-compter-nos-morts-du-covid-138278" target="_blank">link</a> (in French)</li>
+										<li>P. Marion, <i>Comment compter nos morts du Covid ?</i>, The Conversation, May 2020, <a href="https://theconversation.com/comment-compter-nos-morts-du-covid-138278" target="_blank">link</a> (in French).</li>
 										<li>O. Borderies, O. Coudray and P. Marion,
-											<i>Authoring Custom Jupyter Widgets</i>, The Jupyter Blog, March 2018, <a href="https://blog.jupyter.org/authoring-custom-jupyter-widgets-2884a462e724" target="_blank">link</a></li>	
+											<i>Authoring Custom Jupyter Widgets</i>, The Jupyter Blog, March 2018, <a href="https://blog.jupyter.org/authoring-custom-jupyter-widgets-2884a462e724" target="_blank">link</a>.</li>	
 									</ul>
                                 </section>
 
@@ -62,16 +63,56 @@
                                 <ul>
                                     <li>During the school lockdown due to the Covid pandemic (2020), in partnership with the <a href="https://www.polytechnique.edu/en/diversity-and-success-center">D&I department from Ecole Polytechnique</a>, I mentored a high schooler and gave him math classes to prepare him for preparatory classes.</li>
 									<li>In 2016-2017, I was involved in <a href="https://www.association-tremplin.org/">Tremplin</a>, an association which intervenes in underprivileged high schools to encourage pupils to start scientific studies. I gave around fifteen classes to a group of six pupils in Lycée Marcel Pagnol in Athis-Mons.</li>
-									<li>In 2015, I did a six-month internship in <a href="https://epide.fr/">EPIDE</a> in Marseille. This public organisation welcomes young people (aged 18-25) from underprivileged backgrounds and helps them to acquire behavioral and academic skills in order to get a job. During my internship, I co-supervised a group of 30 young people (maths and French classes, general behavior, etc.)</li>
+									<li>In 2015, I did a six-month internship in <a href="https://epide.fr/">EPIDE</a> in Marseille. This public organisation welcomes young people (aged 18-25) from underprivileged backgrounds and helps them to acquire behavioral and academic skills in order to get a job. During my internship, I co-supervised a group of 30 young people (maths and French classes, general behavior, etc.).</li>
 								</ul>
                             </section>
 						
+							<h2>Software projects</h2>
+
+							<p>I list a couple of software projects I worked on between 2017 and 2019.</p>
+							
+							<h4 id="latnet"> LatNet Builder </h4>
+
+							<section>
+								<p><span class="image left"><a href="https://github.com/umontreal-simul/latnetbuilder" class="icon brands style2 fa-github"></a></a></span>
+									LatNet Builder is a C++ open-source software library and tool for constructing highly-uniform point sets 
+									for quasi-Monte Carlo and randomized quasi-Monte Carlo methods using state-of-the-art techniques.
+									Quasi-Monte Carlo methods are used as a speedup over Monte Carlo methods 
+									to integrate multidimensional functions.</p>							
+							
+								<p>LatNet Builder offers various possibilities to use its functionalities:</p>
+
+								<ul>
+									<li>a C++ library.</li>
+									<li>a Command Line Tool.</li>
+									<li>a Python interface and a Graphical User Interface based on the Jupyter ecosystem.</li>
+									<li>a Java interface encapsulated in the Stochastic Simulation in Java (SSJ) software.</li>
+								</ul>
+
+								<p>Test the software online: &nbsp; &nbsp; <a class="no-underline" href="https://mybinder.org/v2/gh/umontreal-simul/latnetbuilder/master?urlpath=/apps%2Fpython-wrapper%2Fnotebooks%2FInterface.ipynb"><img src="images/badge_binder.svg"> </a></p>
+							</section>
+
+							
+							<h4 id="widgets"> Custom Jupyter widgets </h4>
+
+							<section>
+								<p><span class="image left"><a href="https://github.com/PierreMarion23/ipypivot" class="icon brands style2 fa-github"></a></a></span>
+
+									Jupyter interactive widgets enhance the notebook experience by allowing users to create graphical user interfaces. 
+									They enable richer interaction with the data and computing resources. 
+									I worked with Société Générale and Quantstack to develop custom widgets that build on the framework
+									of the base ipywidgets library in order to connect arbitrary JavaScript libraries to the Jupyter ecosystem.</p>							
+							
+								<p>The project deliverables are meant to be a tutorial for other developers to follow the same path and add their favorite JavaScript library to the Jupyter notebook. 
+									To learn more, <a href="https://blog.jupyter.org/authoring-custom-jupyter-widgets-2884a462e724">read our guest post on the Jupyter blog.</a></p>
+								
+							</section>
 						
 						</div>
 					</div>
 
 				<!-- Footer -->
-				<footer id="footer">
+				<!-- <footer id="footer">
 					<div class="inner">
 						<section>
 							<h2>Let's get in touch!</h2>
@@ -85,7 +126,7 @@
 							<li>&copy; Pierre Marion. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
-				</footer>
+				</footer> -->
 
 			</div>
 
