@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pierre Marion - An Attempt at "First Proof"</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="shortcut icon" href="../images/favicon.ico" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- <header id="header">
+						<img src="images/header/header.svg" alt="" /> -->
+					 	<!-- <nav>
+							<ul>
+								<li><a href="#menu">Menu</a></li>
+							</ul>
+						</nav>
+					</header> -->
+
+				<!-- Menu -->
+					<!-- <nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+						<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li> 
+						</ul>
+					</nav>-->
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>An Attempt at "First Proof"</h1>
+
+							<p>Published on 2026/02/12.</p>
+							
+							<p style="text-align:justify;">An initiative called "<a href="https://arxiv.org/abs/2602.05192">First Proof</a>" was published on February 6th by a group of mathematicians, as a benchmark for capabilities of LLMs in mathematical research. They prepared a set of ten mathematical research-level lemmas, which arose naturally as part of their research, but whose proof was never published (because the result is not significant enough for a standalone publication). The proofs will be published on February 14th. In the meantime (one week!), the community was invited to experiment with LLMs to get them to write the proof. One of the main interests of the experiment is that the risks of data contamination in the training set are low given that the results were never published by the authors. Note that this does not preclude that the same or very similar results appear by chance in other works. I experimented with one of the problem, namely Problem 6, which deals with spectral graph theory. The problem is reproduced below.</p>
+								
+							<p style="text-align:justify;">For a graph G = (V, E), let G' denote the graph with the same vertex set, but only the edges between vertices in S. Let L be the Laplacian matrix of G and let L' be the Laplacian of G'. I say that a set of vertices S is ε-light if the matrix εL - L' is positive semidefinite. Does there exist a constant c > 0 so that for every graph G and every ε between 0 and 1, V contains an ε-light subset S of size at least cε|V| ?</p>
+								
+							<p style="text-align:justify;">I chose this problem because it was the only one for which I could fully understand the statement at first read. This being said, let me clarify that I have very little knowledge in spectral graph theory, and graduate-level knowledge (but not research-level) in related tools (e.g., high-dimensional probability). In particular, I do not know how to solve Problem 6 by myself, although I am reasonably confident that I could understand the solution, and <i>perhaps</i> find it myself given a sufficient amount of time and reading about similar problems in the literature. I give below a summary of the experiment and of my impressions, before giving links to transcripts of my discussions with the LLMs (I would have prefered to copy-paste those into text or markdown files, but the formatting was not working correctly).</p>
+
+							<p style="text-align: justify;">Summary of the experiment: I experimented with Gemini 3 Pro (accessible with the 4€ per month subscription) and the free version of ChatGPT. I prompted back and forth the two models, each time prompting the model with a summary of the ideas so far, asking it whether the proof was correct, and if not, suggestions on how to correct it, and sometimes pointing out issues that I had found. At the end of this process, which took about a day, with the vast majority of the time being spent by me reading the output of the LLMs and trying to understand what was going on, the LLMs were not able to find a correct proof of the statement. Interestingly, they were both affirmative that the answer is yes (and convinced me that it should be the case even though they did not find a proof). They proposed incomplete proofs (while affirming that the proof was complete). The proof ideas look interesting: introducing the notion of edge resistance and removing edges with high resistance, sampling at random the remaining edges or vertices, applying the <a href="https://annals.math.princeton.edu/wp-content/uploads/annals-v182-n1-p08-p.pdf">Marcus–Spielman–Srivastava theorem</a> for partitioning sums of rank-one PSD matrices in order to control deviations of the Laplacian of the resulting subgraph, using the probabilistic method. ChatGPT proposed ideas that looked to me as headed in a better direction than Gemini. However, it could not resolve the tension between the fact that on the one hand we want to select <i>vertices</i> at random to construct a valid subgraph, and on the other hand the Marcus–Spielman–Srivastava theorem straightforwardly applies if one selects <i>edges</i> at random (but then this does not constitute a valid subgraph). After several rounds of me pointing this out, it kept generating variations that did not solve the problem but buried it deeper and deeper into funny-looking definitions. I gave up at this point (after prompting Gemini one last time to see if it somehow could recover the correct solution from there, which it could not, although it did propose another possibly relevant direction based on the Bernstein matrix inequality). If I were to continue working on the problem to try to actually solve it, I would either investigate this Bernstein idea or read the proof of Marcus–Spielman–Srivastava to understand if one can adapt it to the case where there is dependence between the PSD matrices, which is what happens when selecting vertices at random and applying the theorem to (a renormalized version of) the Laplacian which writes as a sum of PSD matrix where each matrix corresponds to an edge. We will see on Saturday if the true solution goes along those lines!</p>
+
+							<p style="text-align: justify;">My impressions: I liked the experiment despite a slight frustration not to succeed. I am wondering if the paying version of ChatGPT would have succeeded. I found it difficult not to add a bit of mathematical knowledge when prompting the LLMs (and indeed added a couple of suggestions at some points, although I do not know if there are helpful or not, given that I do not know how to solve the problem!). More generally, my feeling is that we are going in the direction where humans and LLMs work together to solve problems, so I do not know if the best benchmark format is to evaluate LLMs alone, or rather a combination of humans and LLMs (in a format to be defined, perhaps akin to a math competition?).</p>
+
+							<ul>
+								<li>First conversation with Gemini: https://gemini.google.com/share/435be2dcaf4f</li>
+								<li>Conversation with ChatGPT (prompted with the output of the first two conversations with Gemini): https://chatgpt.com/share/698de5df-443c-8007-ac79-16b4e1ef2c27</li>
+								<li>Second conversation with Gemini (prompted with the ouput of ChatGPT): https://gemini.google.com/share/8f341684bd3d</li>
+								<li>Third conversation with Gemini (prompted with the ouput of ChatGPT): https://gemini.google.com/share/cc1afcd71639</li>
+							</ul>
+
+						</div>
+
+
+					</div>
+
+					
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
