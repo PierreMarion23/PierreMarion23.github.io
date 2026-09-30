@@ -1,0 +1,424 @@
+/*
+	Site-specific design, loaded after main.css (Phantom by HTML5 UP) and overriding it:
+	visible header navigation, a narrower reading column, regular-weight body text,
+	sentence-case headings, and one muted link colour.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap");
+
+:root {
+	--text: #2e2e2e;
+	--muted: #6b6b6b;
+	--rule: #e2e2e2;
+	--link: #1f4e79;
+	--link-hover: #10304f;
+	--link-underline: rgba(31, 78, 121, 0.35);
+	--column: 45rem;
+	--gutter: 1.5rem;
+}
+
+@media screen and (max-width: 736px) {
+	:root {
+		--gutter: 1.25rem;
+	}
+}
+
+/* Type */
+
+	body, input, select, textarea {
+		color: var(--text);
+		font-family: "Source Sans 3", "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 1.65;
+	}
+
+	@media screen and (max-width: 736px) {
+		body, input, select, textarea {
+			font-size: 16px;
+		}
+	}
+
+	strong, b {
+		font-weight: 700;
+	}
+
+	#main p {
+		margin: 0 0 1.1em 0;
+	}
+
+	#main ul, #main ol {
+		margin: 0 0 1.25em 0;
+	}
+
+	/* Left-aligned text: justified text leaves uneven gaps between words. */
+	#main [style*="justify"] {
+		text-align: left !important;
+	}
+
+	#main h1 {
+		font-size: 2.1rem;
+		font-weight: 700;
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		margin: 0 0 1.25rem 0;
+	}
+
+	#main h2, #main h3, #main h4, #main h5, #main h6 {
+		color: var(--text);
+		font-weight: 600;
+		letter-spacing: 0;
+		line-height: 1.35;
+		text-transform: none;
+	}
+
+	#main h2 {
+		font-size: 1.4rem;
+		margin: 2.25rem 0 0.9rem 0;
+	}
+
+	/* No extra space between a page title and the first section heading. */
+	#main h1 + h2, #main h1 + section > h2:first-child {
+		margin-top: 0;
+	}
+
+	#main h3 {
+		font-size: 1.15rem;
+		margin: 1.75rem 0 0.75rem 0;
+	}
+
+	#main h4, #main h5, #main h6 {
+		font-size: 1rem;
+		margin: 1.5rem 0 0.5rem 0;
+	}
+
+	@media screen and (max-width: 736px) {
+		#main h1 {
+			font-size: 1.7rem;
+		}
+
+		#main h2 {
+			font-size: 1.25rem;
+		}
+	}
+
+/* Links */
+
+	#main a {
+		border-bottom: 0;
+		color: var(--link);
+		text-decoration: underline;
+		text-decoration-color: var(--link-underline);
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.18em;
+	}
+
+	#main a:hover {
+		color: var(--link-hover) !important;
+		text-decoration-color: currentColor;
+	}
+
+/* Layout: one reading column, shared by the header and the content. */
+
+	#wrapper > * > .inner {
+		max-width: calc(var(--column) + 2 * var(--gutter));
+		padding: 0 var(--gutter);
+	}
+
+	#main {
+		padding-top: 2.5rem;
+	}
+
+/* Header */
+
+	.site-header {
+		padding: 2.25rem var(--gutter) 0 var(--gutter);
+	}
+
+	.site-header-inner {
+		border-bottom: solid 1px var(--rule);
+		margin: 0 auto;
+		max-width: var(--column);
+		padding-bottom: 0.9rem;
+	}
+
+	.site-header a {
+		border-bottom: 0;
+		text-decoration: none;
+	}
+
+	.site-name {
+		color: var(--text);
+		font-size: 1.3rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+
+	.site-nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.2rem 1.25rem;
+		list-style: none;
+		margin: 0.3rem 0 0 0;
+		padding: 0;
+	}
+
+	.site-nav li {
+		padding: 0;
+	}
+
+	.site-nav a {
+		color: var(--muted);
+		font-size: 0.95rem;
+	}
+
+	.site-nav a:hover {
+		color: var(--text) !important;
+	}
+
+	.site-nav a[aria-current="page"] {
+		color: var(--text);
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.35em;
+	}
+
+/* Publications (research.html): title, authors, then venue and links. */
+
+	#main ul.pubs {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	#main ul.pubs li {
+		margin-bottom: 1.1em;
+		padding-left: 0;
+	}
+
+	.pub-title, .pub-authors {
+		display: block;
+	}
+
+	.pub-title {
+		font-weight: 600;
+	}
+
+	.pub-authors b {
+		font-weight: 600;
+		white-space: nowrap;
+	}
+
+	.pub-venue {
+		color: var(--muted);
+	}
+
+	.pub-links a {
+		font-size: 0.9em;
+		margin-right: 0.35em;
+	}
+
+	.pub-links a:before {
+		content: "[";
+		color: var(--muted);
+	}
+
+	.pub-links a:after {
+		content: "]";
+		color: var(--muted);
+	}
+
+	#main h4 + ul.pubs {
+		margin-top: 0.25rem;
+	}
+
+/* Blog list (blog.html and index.html): date in grey, then the title. */
+
+	#main ul.post-list {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	#main ul.post-list li {
+		display: flex;
+		gap: 0 1rem;
+		padding-left: 0;
+	}
+
+	.post-date {
+		color: var(--muted);
+		flex: 0 0 6.5rem;
+		font-variant-numeric: tabular-nums;
+	}
+
+	@media screen and (max-width: 480px) {
+		#main ul.post-list li {
+			display: block;
+			margin-bottom: 0.6em;
+		}
+
+		.post-date {
+			display: block;
+			font-size: 0.9em;
+		}
+	}
+
+/* Blog posts: the first paragraph (publication date, thanks) in grey, and the link back. */
+
+	.is-post #main h1 + p {
+		color: var(--muted);
+	}
+
+	.post-back {
+		border-top: solid 1px var(--rule);
+		margin-top: 2.5rem !important;
+		padding-top: 1rem;
+	}
+
+/* Home page: links row, and the photo above the text on phones. */
+
+	#main .profile-links a {
+		margin-right: 1.25rem;
+		white-space: nowrap;
+	}
+
+	#main .profile-links i {
+		color: var(--muted);
+		margin-right: 0.3em;
+	}
+
+	/* The home page opens with nested sections: no extra space above the photo. */
+	#main .inner > section:first-child, #main .inner > section:first-child > section:first-child {
+		padding-top: 0;
+	}
+
+	@media screen and (max-width: 736px) {
+		#main .image.left {
+			display: block;
+			float: none;
+			margin: 0 0 1.25rem 0;
+			max-width: none;
+			padding: 0;
+			top: 0;
+		}
+	}
+
+/* Footer */
+
+	.site-footer {
+		padding: 0 var(--gutter) 2.5rem var(--gutter);
+	}
+
+	.site-footer-inner {
+		border-top: solid 1px var(--rule);
+		color: var(--muted);
+		font-size: 0.85rem;
+		margin: 0 auto;
+		max-width: var(--column);
+		padding-top: 1rem;
+	}
+
+	.site-footer a {
+		border-bottom: 0;
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-color: var(--rule);
+	}
+
+/* Math (KaTeX): formulas slightly larger than the text, as usual, but less than KaTeX's default. */
+
+	#main .katex {
+		font-size: 1.1em;
+	}
+
+/* Publications switch (research.html): two text buttons, the active one underlined.
+   main.css forces button colours with !important, hence the !important here. */
+
+	.pubs-switch {
+		color: var(--muted);
+	}
+
+	.pubs-switch button {
+		background: none;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+		color: var(--link) !important;
+		cursor: pointer;
+		font: inherit;
+		height: auto;
+		letter-spacing: 0;
+		line-height: inherit;
+		margin: 0 0 0 0.6em;
+		padding: 0;
+		text-transform: none;
+	}
+
+	.pubs-switch button:hover {
+		background: none;
+		color: var(--link-hover) !important;
+	}
+
+	.pubs-switch button[aria-pressed="true"] {
+		color: var(--text) !important;
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.35em;
+	}
+
+/* Publication groups (research.html): one foldable block per topic or year, marked by a vertical line. */
+
+	#main details.pub-group {
+		border-left: solid 3px var(--link);
+		margin: 0 0 0.9rem 0;
+		padding: 0 0 0 1rem;
+	}
+
+	#main details.pub-group > summary {
+		align-items: baseline;
+		cursor: pointer;
+		display: flex;
+		gap: 0.75rem;
+		list-style: none;
+		margin: 0 0 0 -1rem;
+		padding: 0.45rem 0.5rem 0.45rem 1rem;
+	}
+
+	#main details.pub-group > summary::-webkit-details-marker {
+		display: none;
+	}
+
+	#main details.pub-group > summary:hover {
+		background: #f4f6f9;
+	}
+
+	#main details.pub-group > summary:before {
+		color: var(--link);
+		content: "\25B8";
+		display: inline-block;
+		transition: transform 0.15s ease;
+		width: 0.8em;
+	}
+
+	#main details.pub-group[open] > summary:before {
+		transform: rotate(90deg);
+	}
+
+	#main details.pub-group > summary h3 {
+		font-size: 1.15rem;
+		margin: 0;
+	}
+
+	.pub-group-count {
+		color: var(--muted);
+		font-size: 0.9rem;
+		margin-left: auto;
+		white-space: nowrap;
+	}
+
+	#main details.pub-group > ul.pubs {
+		margin: 0.75rem 0 0.5rem 0;
+	}
+
+	.pubs-switch-sep {
+		margin: 0 0.1em 0 0.6em;
+	}

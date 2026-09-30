@@ -1,0 +1,10 @@
+name = "site-comments"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+GITHUB_REPO = "PierreMarion23/PierreMarion23.github.io"
+GITHUB_BRANCH = "master"
+SITE_URL = "https://pierremarion23.github.io"
+# Comma-separated. Add e.g. "http://localhost:8000" to test from a local server.
+ALLOWED_ORIGINS = "https://pierremarion23.github.io"

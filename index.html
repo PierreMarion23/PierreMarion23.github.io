@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -17,34 +18,10 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<!-- <img src="images/header/header.svg" alt="" /> -->
-					 	<nav>
-							<ul>
-								<li><a href="#menu">Menu</a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="research.html">Research</a></li>
-							<li><a href="teaching.html">Teaching and Service</a></li>
-							<li><a href="bio.html">Bio</a></li>
-							<li><a href="carbon.html">Carbon Impact</a></li>
-							<li><a href="misc.html">Miscellaneous</a></li>
-						</ul>
-					</nav>
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
 							<section>
-								<h1 style="text-align:center;">Pierre Marion</h1>
 								<section>
 									<span class="image left"><img src="images/photo.png" style="max-height: 250px;max-width: 250px;" alt=""/></span>
 									<p>
@@ -52,7 +29,7 @@
 										I was previously in 2024-25 a postdoctoral researcher at EPFL under the supervision of <a href="https://lchizat.github.io/">Lénaïc Chizat</a>, and before that a PhD student at Sorbonne Université under the supervision of <a href="https://perso.lpsm.paris/~biau/">Gérard Biau</a> and <a href="https://jpvert.github.io/">Jean-Philippe Vert</a>. My <a href="research.html">research interests</a> regard the theory of deep learning with an emphasis on generative models and optimization dynamics of neural networks, as well as AI for maths and reasoning.
 									</p>
 									<p>
-										I am concerned by climate change, hence I strive to fly less and build viable alternatives to frequent intercontinental travel for the research community. Please see details on <a href="carbon.html">this webpage</a>.
+										I am concerned by climate change, hence I strive to fly less and build viable alternatives to frequent intercontinental travel for the research community. <!-- Please see details on <a href="carbon.html">this webpage</a>. -->
 										<!-- I strive to  [More to come, in the meantime see this outdated <a href="https://docs.google.com/document/d/1aOd_50xParMUNmvvvCrmUebmUTlx2yQywLUSeYqEbIA/edit">statement</a> for details.] -->
 									</p>
 									<p>
@@ -64,7 +41,18 @@
 									<p>
 										<b>Contact:</b> firstname.lastname@inria.fr
 									</p>
+									<p class="profile-links">
+										<a href="https://scholar.google.com/citations?user=Q8H5LgIAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+										<a href="https://github.com/PierreMarion23" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+									</p>
 									
+								</section>
+
+								<section>
+								<h2>Blog</h2>
+								
+								<ul id="posts" data-limit="3"></ul>
+								<p><a href="blog.html">All blog posts</a></p>
 								</section>
 
 								<section>
@@ -88,17 +76,6 @@
 										<li><a href="https://nathandoumeche.com/">Nathan Doumèche</a> (M2, 2021), co-supervised with <a href="https://www.lpsm.paris/pageperso/biau/">Gérard Biau</a> and <a href="https://afermanian.github.io/">Adeline Fermanian</a>. Moved to Sorbonne Université and EDF as a PhD student.</li>
 									</ul>
 
-								</section>
-
-								<section>
-								<h2>Some thoughts (proto-blog?)</h2>
-								
-								<ul>
-									<li>2026/02/12: <a href="thoughts/2026-02-12.html">An Attempt at "First Proof".</a></li>
-									<li>2025/12/08: <a href="thoughts/2025-12-08.html">On the way back from EurIPS 2025.</a></li>
-									<li>2025/07/18: <a href="thoughts/2025-07-18.html">Towards decentralized ML conferences.</a></li>
-									<li>2023/10/03: <a href="thoughts/2023-10-03.html">Why I am not attending NeurIPS 2023 in person.</a></li>
-								</ul>
 								</section>
 
 								<!-- <section>
@@ -244,6 +221,8 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="assets/js/site.js"></script>
+			<script src="assets/js/posts.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>

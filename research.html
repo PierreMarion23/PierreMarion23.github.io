@@ -10,36 +10,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<!-- Header -->
-				<header id="header">
-					<!-- <img src="images/header/header.svg" alt="" /> -->
-					 <h2 style="text-align:center; margin-top: 25px;">Pierre Marion</h2>
-				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
-				</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="research.html">Research</a></li>
-							<li><a href="teaching.html">Teaching and Service</a></li>
-							<li><a href="bio.html">Bio</a></li>
-							<li><a href="carbon.html">Carbon Impact</a></li>
-							<li><a href="misc.html">Miscellaneous</a></li>
-						</ul>
-					</nav>
 
 				<!-- Main -->
 					<div id="main">
@@ -61,46 +38,151 @@
 
 								<p>See also my <a href="https://scholar.google.com/citations?user=Q8H5LgIAAAAJ">Google Scholar</a>. Stars denote first co-authors.</p>
 
-								<h4>Preprints</h4>
-									<ul>
-										<li>P. Marion, <i>Edge Flow: A Tractable and Predictive Continuous-Time Model for Gradient Descent at the Edge of Stability</i>, arXiv preprint, June 2026. <a href="https://arxiv.org/abs/2606.18080" target="_blank">Online access</a>.</li>
-										<li>L. Chizat, P. Marion, Y. Yesbay, <i>Phase Diagram of Dropout for Two-Layer Neural Networks in the Mean-Field Regime</i>, arXiv preprint, October 2025. <a href="https://arxiv.org/abs/2510.07554" target="_blank">Online access</a>.</li>
+								<!-- Publications, by topic. To add a paper, copy an <li> into its topic (newest first) and set data-date="YYYY-MM":
+								     the "By year" view (assets/js/pubs.js) is built from these entries. -->
+								<div id="pubs">
+									<h3>AI for mathematics</h3>
+									<ul class="pubs">
+										<li data-date="2026-12">
+											<span class="pub-title">Distilling LLM Feedback for Lean Theorem Proving</span>
+											<span class="pub-authors">G. Narozniak, G. Biau, R. Munos, A. Rammal, <b>P. Marion</b></span>
+											<span class="pub-venue">NeurIPS 2026.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2605.30861" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2025-01">
+											<span class="pub-title">Humanity's Last Exam</span>
+											<span class="pub-authors">L. Phan et al.</span>
+											<span class="pub-venue">Technical report, January 2025.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2501.14249" target="_blank">arXiv</a></span>
+										</li>
 									</ul>
-
-								<h4>Peer-reviewed Publications</h4>
-									<ul>
-										<li>G. Narozniak, G. Biau, R. Munos, A. Rammal, P. Marion, <i>Distilling LLM Feedback for Lean Theorem Proving</i>, NeurIPS 2026. <a href="https://arxiv.org/abs/2605.30861" target="_blank">Online access</a>.</li>
-										<li>P. Marion*, Y.-H. Wu*, <i>Understanding diffusion models requires rethinking (again) generalization</i>, NeurIPS 2026 Position Paper. <a href="https://arxiv.org/abs/2605.06077" target="_blank">Online access</a>.</li>
-										<li>L. Fedorov, M. Sander, P. Marion, R. Elie, M. Laurière, <i>Clustering in Deep Stochastic Transformers</i>, ICML 2026, <i>spotlight presentation</i>, July 2026.<a href="https://arxiv.org/abs/2601.21942" target="_blank">Online access</a>. </li>
-										<li>Y.-H. Wu, Q. Berthet, G. Biau, C. Boyer, R. Elie, P. Marion, <i>Optimal Stopping in Latent Diffusion Models</i>, ICML 2026, July 2026. <a href="https://arxiv.org/abs/2510.08409" target="_blank">Online access</a>.</li>
-										<li>S. Kale, P. Manupriya, P. Marion, F. Bach, A. Raj, <i>Exponential Convergence of (Stochastic) Gradient Descent for Separable Logistic Regression</i>, TMLR, May 2026. <a href="https://arxiv.org/abs/2602.18946" target="_blank">Online access</a>.</li>
-										<li>O. Duranthon, P. Marion, C. Boyer, B. Loureiro, L. Zdeborová, <i>Statistical Advantage of Softmax Attention: Insights from Single-Location Regression</i>, ICLR 2026, April 2026. <a href="https://arxiv.org/abs/2509.21936" target="_blank">Online access</a>.</li>
-										<li>J. Wu*, P. Marion*, P. Bartlett, <i>Large Stepsizes Accelerate Gradient Descent for Regularized Logistic Regression</i>, NeurIPS 2025, December 2025. <a href="https://arxiv.org/abs/2506.02336" target="_blank">Online access</a>.</li>
-										<li>R. Maulen-Soto, P. Marion, C. Boyer, <i>Attention-based clustering</i>, NeurIPS 2025, December 2025. <a href="https://arxiv.org/abs/2505.13112" target="_blank">Online access</a>.</li>
-										<li>Y.-H. Wu, P. Marion, G. Biau, C. Boyer, <i>Taking a Big Step: Large Learning Rates in Denoising Score Matching Prevent Memorization</i>, COLT 2025, July 2025. <a href="https://arxiv.org/abs/2502.03435" target="_blank">Online access</a>.</li>
-										<li>P. Marion, A. Korba, P. Bartlett, M. Blondel, V. De Bortoli, A. Doucet, F. Llinares-López, C. Paquette, Q. Berthet, <i>Implicit Diffusion: Efficient Optimization through Stochastic Sampling</i>, AISTATS 2025, <i>oral presentation</i>, May 2025. <a href="https://arxiv.org/abs/2402.05468" target="_blank">Online access</a>.</li>
-										<li>P. Marion, R. Berthier, G. Biau, C. Boyer, <i>Attention layers provably solve single-location regression</i>, ICLR 2025, April 2025. <a href="https://arxiv.org/abs/2410.01537" target="_blank">Online access</a>.</li>
-										<li>P. Marion, A.Fermanian, G. Biau, J.P. Vert, <i>Scaling ResNets in the Large-depth Regime</i>, Journal of Machine Learning Research, February 2025. <a href="https://jmlr.org/papers/v26/22-0664.html" target="_blank">Online access</a>.</li>
-										<li>P. Marion, L. Chizat, <i>Deep linear networks for regression are implicitly regularized towards flat minima</i>, NeurIPS 2024, December 2024. <a href="https://arxiv.org/abs/2405.13456" target="_blank">Online access</a>.</li>
-										<li>P. Marion*, Y.-H. Wu*, M. Sander, G. Biau, <i>Implicit regularization of deep residual networks towards neural ODEs </i>, ICLR 2024, <i>spotlight presentation</i>, May 2024. <a href="https://arxiv.org/abs/2309.01213" target="_blank">Online access</a>.</li>
-										<li>P. Marion, <i>Generalization bounds for neural ordinary differential equations and deep residual networks</i>, NeurIPS 2023, December 2023. <a href="https://arxiv.org/abs/2305.06648" target="_blank">Online access</a>.</li>
-										<li>P. Marion, R. Berthier, <i>Leveraging the two-timescale regime to demonstrate convergence of neural networks</i>, NeurIPS 2023, December 2023. <a href="https://arxiv.org/abs/2304.09576" target="_blank">Online access</a>.</li>
-										<li>A. Fermanian*, P. Marion*, J.P. Vert, G. Biau, <i>Framing RNN as a kernel method: A neural ODE approach</i>, NeurIPS 2021, <i>oral presentation</i>, December 2021. <a href="https://proceedings.neurips.cc/paper/2021/hash/18a9042b3fc5b02fe3d57fea87d6992f-Abstract.html" target="_blank">Online access</a>.</li>
-										<li>P. Marion, P. Nowak, F. Piccinno, <i>Structured Context and High-Coverage Grammar for Conversational Question Answering over Knowledge Graphs</i>, EMNLP 2021, November 2021. <a href="https://aclanthology.org/2021.emnlp-main.695/" target="_blank">Online access</a>.</li>
-										<li>P. L’Ecuyer, P. Marion, M. Godin, and F. Puchhammer, <i>A Tool for Custom Construction of QMC and RQMC Point Sets</i>, Monte Carlo and Quasi-Monte Carlo Methods 2020, August 2020. <a href="https://www.springerprofessional.de/en/a-tool-for-custom-construction-of-qmc-and-rqmc-point-sets/22166480" target="_blank">Online access.</a>.</li>
-										<li>P. Marion, M. Godin, and P. L’Ecuyer, <i>An algorithm to compute the t-value of a digital net
-										and of its projections</i>, Journal of Computational and Applied Mathematics, June 2020. <a href="https://doi.org/10.1016/j.cam.2019.112669" target="_blank">Online access</a>.</li>
+									<h3>Optimization and training dynamics</h3>
+									<ul class="pubs">
+										<li data-date="2026-06">
+											<span class="pub-title">Edge Flow: A Tractable and Predictive Continuous-Time Model for Gradient Descent at the Edge of Stability</span>
+											<span class="pub-authors"><b>P. Marion</b></span>
+											<span class="pub-venue">arXiv preprint, June 2026.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2606.18080" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2026-05">
+											<span class="pub-title">Exponential Convergence of (Stochastic) Gradient Descent for Separable Logistic Regression</span>
+											<span class="pub-authors">S. Kale, P. Manupriya, <b>P. Marion</b>, F. Bach, A. Raj</span>
+											<span class="pub-venue">TMLR, May 2026.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2602.18946" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2025-12">
+											<span class="pub-title">Large Stepsizes Accelerate Gradient Descent for Regularized Logistic Regression</span>
+											<span class="pub-authors">J. Wu*, <b>P. Marion</b>*, P. Bartlett</span>
+											<span class="pub-venue">NeurIPS 2025.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2506.02336" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2025-10">
+											<span class="pub-title">Phase Diagram of Dropout for Two-Layer Neural Networks in the Mean-Field Regime</span>
+											<span class="pub-authors">L. Chizat, <b>P. Marion</b>, Y. Yesbay</span>
+											<span class="pub-venue">arXiv preprint, October 2025.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2510.07554" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2024-12">
+											<span class="pub-title">Deep linear networks for regression are implicitly regularized towards flat minima</span>
+											<span class="pub-authors"><b>P. Marion</b>, L. Chizat</span>
+											<span class="pub-venue">NeurIPS 2024.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2405.13456" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2023-12">
+											<span class="pub-title">Leveraging the two-timescale regime to demonstrate convergence of neural networks</span>
+											<span class="pub-authors"><b>P. Marion</b>, R. Berthier</span>
+											<span class="pub-venue">NeurIPS 2023.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2304.09576" target="_blank">arXiv</a></span>
+										</li>
 									</ul>
-								
-								<h4>Technical Reports</h4>
-									<ul>
-										<li>L. Phan et al., <i>Humanity's Last Exam</i>, arXiv:2501.14249, January 2025. <a href="https://arxiv.org/abs/2501.14249" target="_blank">Online access</a>.</li>
+									<h3>Diffusion and generative models</h3>
+									<ul class="pubs">
+										<li data-date="2026-12">
+											<span class="pub-title">Understanding diffusion models requires rethinking (again) generalization</span>
+											<span class="pub-authors"><b>P. Marion</b>*, Y.-H. Wu*</span>
+											<span class="pub-venue">NeurIPS 2026, position paper.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2605.06077" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2026-07">
+											<span class="pub-title">Optimal Stopping in Latent Diffusion Models</span>
+											<span class="pub-authors">Y.-H. Wu, Q. Berthet, G. Biau, C. Boyer, R. Elie, <b>P. Marion</b></span>
+											<span class="pub-venue">ICML 2026.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2510.08409" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2025-07">
+											<span class="pub-title">Taking a Big Step: Large Learning Rates in Denoising Score Matching Prevent Memorization</span>
+											<span class="pub-authors">Y.-H. Wu, <b>P. Marion</b>, G. Biau, C. Boyer</span>
+											<span class="pub-venue">COLT 2025.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2502.03435" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2025-05">
+											<span class="pub-title">Implicit Diffusion: Efficient Optimization through Stochastic Sampling</span>
+											<span class="pub-authors"><b>P. Marion</b>, A. Korba, P. Bartlett, M. Blondel, V. De Bortoli, A. Doucet, F. Llinares-López, C. Paquette, Q. Berthet</span>
+											<span class="pub-venue">AISTATS 2025, <i>oral presentation</i>.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2402.05468" target="_blank">arXiv</a></span>
+										</li>
 									</ul>
-
-								<h4>PhD Thesis</h4>
-									<ul>
-										<li>P. Marion, <i>Mathematics of deep learning: generalization, optimization, continuous-time models</i>, November 2023. <a href="files/thesis.pdf" target="_blank">Download my thesis</a>.</li>
+									<h3>Attention and transformers</h3>
+									<ul class="pubs">
+										<li data-date="2026-07">
+											<span class="pub-title">Clustering in Deep Stochastic Transformers</span>
+											<span class="pub-authors">L. Fedorov, M. Sander, <b>P. Marion</b>, R. Elie, M. Laurière</span>
+											<span class="pub-venue">ICML 2026, <i>spotlight presentation</i>.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2601.21942" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2026-04">
+											<span class="pub-title">Statistical Advantage of Softmax Attention: Insights from Single-Location Regression</span>
+											<span class="pub-authors">O. Duranthon, <b>P. Marion</b>, C. Boyer, B. Loureiro, L. Zdeborová</span>
+											<span class="pub-venue">ICLR 2026.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2509.21936" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2025-12">
+											<span class="pub-title">Attention-based clustering</span>
+											<span class="pub-authors">R. Maulen-Soto, <b>P. Marion</b>, C. Boyer</span>
+											<span class="pub-venue">NeurIPS 2025.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2505.13112" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2025-04">
+											<span class="pub-title">Attention layers provably solve single-location regression</span>
+											<span class="pub-authors"><b>P. Marion</b>, R. Berthier, G. Biau, C. Boyer</span>
+											<span class="pub-venue">ICLR 2025.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2410.01537" target="_blank">arXiv</a></span>
+										</li>
 									</ul>
+									<h3>Deep residual networks and neural ODEs</h3>
+									<ul class="pubs">
+										<li data-date="2025-02">
+											<span class="pub-title">Scaling ResNets in the Large-depth Regime</span>
+											<span class="pub-authors"><b>P. Marion</b>, A. Fermanian, G. Biau, J.P. Vert</span>
+											<span class="pub-venue">Journal of Machine Learning Research, February 2025.</span> <span class="pub-links"><a href="https://jmlr.org/papers/v26/22-0664.html" target="_blank">JMLR</a></span>
+										</li>
+										<li data-date="2024-05">
+											<span class="pub-title">Implicit regularization of deep residual networks towards neural ODEs</span>
+											<span class="pub-authors"><b>P. Marion</b>*, Y.-H. Wu*, M. Sander, G. Biau</span>
+											<span class="pub-venue">ICLR 2024, <i>spotlight presentation</i>.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2309.01213" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2023-12">
+											<span class="pub-title">Generalization bounds for neural ordinary differential equations and deep residual networks</span>
+											<span class="pub-authors"><b>P. Marion</b></span>
+											<span class="pub-venue">NeurIPS 2023.</span> <span class="pub-links"><a href="https://arxiv.org/abs/2305.06648" target="_blank">arXiv</a></span>
+										</li>
+										<li data-date="2021-12">
+											<span class="pub-title">Framing RNN as a kernel method: A neural ODE approach</span>
+											<span class="pub-authors">A. Fermanian*, <b>P. Marion</b>*, J.P. Vert, G. Biau</span>
+											<span class="pub-venue">NeurIPS 2021, <i>oral presentation</i>.</span> <span class="pub-links"><a href="https://proceedings.neurips.cc/paper/2021/hash/18a9042b3fc5b02fe3d57fea87d6992f-Abstract.html" target="_blank">Proceedings</a></span>
+										</li>
+									</ul>
+									<h3>Earlier work: natural language processing and quasi-Monte Carlo</h3>
+									<ul class="pubs">
+										<li data-date="2021-11">
+											<span class="pub-title">Structured Context and High-Coverage Grammar for Conversational Question Answering over Knowledge Graphs</span>
+											<span class="pub-authors"><b>P. Marion</b>, P. Nowak, F. Piccinno</span>
+											<span class="pub-venue">EMNLP 2021.</span> <span class="pub-links"><a href="https://aclanthology.org/2021.emnlp-main.695/" target="_blank">ACL Anthology</a></span>
+										</li>
+										<li data-date="2020-08">
+											<span class="pub-title">A Tool for Custom Construction of QMC and RQMC Point Sets</span>
+											<span class="pub-authors">P. L’Ecuyer, <b>P. Marion</b>, M. Godin, and F. Puchhammer</span>
+											<span class="pub-venue">Monte Carlo and Quasi-Monte Carlo Methods 2020.</span> <span class="pub-links"><a href="https://www.springerprofessional.de/en/a-tool-for-custom-construction-of-qmc-and-rqmc-point-sets/22166480" target="_blank">Springer</a></span>
+										</li>
+										<li data-date="2020-06">
+											<span class="pub-title">An algorithm to compute the t-value of a digital net and of its projections</span>
+											<span class="pub-authors"><b>P. Marion</b>, M. Godin, and P. L’Ecuyer</span>
+											<span class="pub-venue">Journal of Computational and Applied Mathematics, June 2020.</span> <span class="pub-links"><a href="https://doi.org/10.1016/j.cam.2019.112669" target="_blank">DOI</a></span>
+										</li>
+									</ul>
+									<h3>PhD thesis</h3>
+									<ul class="pubs">
+										<li data-date="2023-11">
+											<span class="pub-title">Mathematics of deep learning: generalization, optimization, continuous-time models</span>
+											<span class="pub-authors"><b>P. Marion</b></span>
+											<span class="pub-venue">PhD thesis, Sorbonne Université, November 2023.</span> <span class="pub-links"><a href="files/thesis.pdf" target="_blank">PDF</a></span>
+										</li>
+									</ul>
+								</div>
 
 		
 							</section>
@@ -130,6 +212,8 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="assets/js/site.js"></script>
+			<script src="assets/js/pubs.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
