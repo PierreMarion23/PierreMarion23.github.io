@@ -16,7 +16,7 @@
 		repo: 'PierreMarion23/PierreMarion23.github.io',
 		branch: 'master',
 		workerUrl: 'https://site-comments.pierremarion314.workers.dev',        // e.g. 'https://site-comments.<your-subdomain>.workers.dev'; empty hides the form
-		turnstileSiteKey: ''  // site key from the Cloudflare Turnstile dashboard
+		turnstileSiteKey: '0x4AAAAAAFKk_ZNHn-Kct7uN'  // site key (public) from the Cloudflare Turnstile dashboard; empty hides the form
 	};
 
 	var container = document.getElementById('comments');
@@ -152,7 +152,7 @@
 		}
 
 	// Form for new comments. The list is loaded after it exists, so that comments get a Reply link.
-		if (!CONFIG.workerUrl) return load();
+		if (!CONFIG.workerUrl || !CONFIG.turnstileSiteKey) return load();
 
 		form = document.createElement('form');
 		form.innerHTML =
