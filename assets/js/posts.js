@@ -7,6 +7,7 @@
 (function() {
 
 	var POSTS = [
+		['2026/10/01', 'thoughts/2026-10-01.html', 'The Future of Research in the Age of AI'],
 		['2026/02/12', 'thoughts/2026-02-12.html', 'An Attempt at "First Proof"'],
 		['2025/12/08', 'thoughts/2025-12-08.html', 'On the way back from EurIPS 2025'],
 		['2025/07/18', 'thoughts/2025-07-18.html', 'Towards decentralized ML conferences'],

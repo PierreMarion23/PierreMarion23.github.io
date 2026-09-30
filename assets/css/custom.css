@@ -422,3 +422,12 @@
 	.pubs-switch-sep {
 		margin: 0 0.1em 0 0.6em;
 	}
+
+/* Blog posts: acknowledgements under the publication date, in the same grey, smaller and in italics. */
+
+	#main p.post-thanks {
+		color: var(--muted);
+		font-size: 0.9em;
+		font-style: italic;
+		margin-top: -0.6em;
+	}
